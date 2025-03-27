@@ -14,5 +14,5 @@ public class APIResponseAttendee<T> {
 	private String message;
 	private T payload;
 	private HttpStatus httpStatus;
-	private LocalDateTime time;
+	private LocalDateTime timestamp;
 }

@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class APIResponseVenue<T> {
+public class APIResponseEvent<T> {
 	private String message;
 	private T payload;
 	private HttpStatus httpStatus;
