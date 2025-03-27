@@ -10,3 +10,11 @@ VALUES ('Alice Johnson', 'alice@example.com'),
        ('Helen Lopez', 'helen@example.com'),
        ('Ian Mitchell', 'ian@example.com'),
        ('Jessica Nelson', 'jessica@example.com');
+
+
+-- Insert into Venues
+INSERT INTO venues (venue_name, location)
+VALUES ('Grand Hall', 'New York'),
+       ('Conference Center', 'San Francisco'),
+       ('Tech Park', 'Los Angeles'),
+       ('City Expo Center', 'Chicago');

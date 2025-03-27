@@ -31,4 +31,16 @@ public interface IAttendeeRepository {
 					INSERT INTO attendees VALUES (default, #{req.attendeeName}, #{req.email} ) RETURNING *;
 					""")
 	Attendee createAttendee(@Param("req") AttendeeRequest request);
+
+	@ResultMap("attendeeMapper")
+	@Select("""
+					UPDATE attendees SET attendee_name = #{req.attendeeName}, email = #{req.email} WHERE attendee_id = #{attendeeId} RETURNING *;
+					""")
+	Attendee updateAttendeeById(Long attendeeId, @Param("req") AttendeeRequest request);
+
+	@ResultMap("attendeeMapper")
+	@Select("""
+					DELETE FROM attendees WHERE attendee_id = #{attendeeId} RETURNING *;
+					""")
+	Attendee deleteAttendeeById(Long attendeeId);
 }
