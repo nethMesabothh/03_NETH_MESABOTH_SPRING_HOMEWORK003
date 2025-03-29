@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,4 +24,6 @@ public class AttendeeRequest {
 	@NotBlank
 	@Email
 	private String email;
+
+	private List<Long> eventIds;
 }

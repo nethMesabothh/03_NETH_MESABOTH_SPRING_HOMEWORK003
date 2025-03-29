@@ -11,7 +11,7 @@ public interface IVenueRepository {
 
 	@Results(id = "venueMapper", value = {
 					@Result(property = "venueId", column = "venue_id"),
-					@Result(property = "venueName", column = "venue_name")
+					@Result(property = "venueName", column = "venue_name"),
 	})
 	@Select("""
 					SELECT * FROM venues
@@ -42,4 +42,9 @@ public interface IVenueRepository {
 					DELETE FROM venues WHERE venue_id = #{venueId} RETURNING *;
 					""")
 	Venue deleteVenueById(Long venueId);
+
+	@Select("""
+					SELECT COUNT(*) FROM venues WHERE venue_id = #{venueId}
+					""")
+	int existsById(Long venueId);
 }

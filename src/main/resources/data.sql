@@ -27,6 +27,20 @@ VALUES ('Tech Conference 2025', '2025-05-10', 1),
        ('Cybersecurity Summit', '2025-08-25', 1),
        ('Blockchain Forum', '2025-09-30', 4);
 
+
+-- Insert into Event_Attendee (Random attendees for events)
+INSERT INTO event_attendee (event_id, attendee_id)
+VALUES (1, 6),
+       (1, 2),
+       (1, 3),
+       (2, 4),
+       (2, 6),
+       (3, 7),
+       (3, 8),
+       (4, 9),
+       (4, 10),
+       (5, 7);
+
 -- Update Date Events
 ALTER TABLE events
-ALTER COLUMN event_date TYPE TIMESTAMP
+    ALTER COLUMN event_date TYPE TIMESTAMP

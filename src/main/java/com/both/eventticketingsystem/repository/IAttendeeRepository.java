@@ -12,7 +12,7 @@ public interface IAttendeeRepository {
 
 	@Results(id = "attendeeMapper", value = {
 					@Result(property = "attendeeId", column = "attendee_id"),
-					@Result(property = "attendeeName", column = "attendee_name")
+					@Result(property = "attendeeName", column = "attendee_name"),
 	})
 	@Select("""
 					SELECT * FROM attendees
